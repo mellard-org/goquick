@@ -1,0 +1,31 @@
+
+Showing logs for build [32mmellard-org-goquick-master-6n6ck-1[0m stage [32mfrom-build-pack[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1601722088.9240382,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32mmellard-org-goquick-master-6n6ck-1[0m stage [32mfrom-build-pack[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32mmellard-org-goquick-master-6n6ck-1[0m stage [32mfrom-build-pack[0m and container [32mplace-tools[0m
+
+Showing logs for build [32mmellard-org-goquick-master-6n6ck-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-mellard-org-goquick-master-6n6ck-mlnbg[0m
+{"level":"info","ts":1601722216.7737825,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/mellard-org/goquick.git @ v0.0.2 in path /workspace/source"}
+{"level":"warn","ts":1601722216.7795851,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /root/.ssh: file exists"}
+{"level":"info","ts":1601722216.8762968,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32mmellard-org-goquick-master-6n6ck-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32mmellard-org-goquick-master-6n6ck-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mmellard-org-goquick-master-6n6ck-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mmellard-org-goquick-master-6n6ck-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-make-build[0m
+CGO_ENABLED=0 GO15VENDOREXPERIMENT=1 go build -ldflags '' -o bin/goquick main.go
+
+Showing logs for build [32mmellard-org-goquick-master-6n6ck-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+E1003 10:50:26.750336      11 aws_credentials.go:77] while getting AWS credentials NoCredentialProviders: no valid providers in chain. Deprecated.
+	For verbose messaging see aws.Config.CredentialsChainVerboseErrors
+error checking push permissions -- make sure you entered the correct tag name, and that you are authenticated correctly, and try again: checking push permission for "tf**legibledog.azurecr.io/mellard-org/goquick:0.0.2": creating push check transport for tf**legibledog.azurecr.io failed: GET https://tf**legibledog.azurecr.io/oauth2/token?scope=repository%3Amellard-org%2Fgoquick%3Apush%2Cpull&service=tf**legibledog.azurecr.io: UNAUTHORIZED: authentication required, visit https://aka.ms/acr/authorization for more information.
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-build-container-build'. The execution of the pipeline has stopped.[0m
