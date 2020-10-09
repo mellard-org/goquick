@@ -10,4 +10,4 @@ pipelineConfig:
             steps:
               - name: build-and-push-image
                 command: /kaniko/executor
-                args: ['--dockerfile=Dockerfile','--destination=tfjxlegibledog.azurecr.io/potato']
+                args: ['--dockerfile=Dockerfile','--destination=tfjxlegibledog.azurecr.io/potato', "--context=/workspace/source"]
