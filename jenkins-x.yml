@@ -9,6 +9,4 @@ pipelineConfig:
           - name: build
             steps:
               - name: build-and-push-image
-                image: mellardc/potato
-                command: /kaniko/executor
                 args: ['--dockerfile=Dockerfile','--destination=tfjxlegibledog.azurecr.io/potato']
