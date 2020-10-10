@@ -9,6 +9,6 @@ pipelineConfig:
           - name: build
             steps:
               - name: build-and-push-image
+                image: gcr.io/kaniko-project/executor:a310cc6d1cd449f95cedd23393de766fdc649651
                 command: /kaniko/executor
                 args: ['--dockerfile=Dockerfile','--destination=tfjxlegibledog.azurecr.io/potato', "--context=/workspace/source"]
-
