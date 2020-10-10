@@ -12,13 +12,13 @@ pipelineConfig:
                 - name: dconf
                   secret:
                     secretName: jenkins-docker-cfg
-                    items:
-                    - key: config.json
-                      path: kaniko/.docker/config.json
+#                    items:
+#                    - key: config.json
+#                      path: kaniko/.docker/config.json
               containerOptions:
                 volumeMounts:
                   - name: dconf
-                    mountPath: /secrets
+                    mountPath: /kaniko/.docker
             steps:
               - name: build-and-push-image
                 command: /kaniko/executor
