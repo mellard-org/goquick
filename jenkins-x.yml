@@ -15,10 +15,10 @@ pipelineConfig:
 #                    items:
 #                      - key: config.json
 #                        path: /kaniko/.docker/config.json
-#              containerOptions:
-#                volumeMounts:
-#                  - name: dconf
-#                    mountPath: /secrets
+              containerOptions:
+                volumeMounts:
+                  - name: dconf
+                    mountPath: /secrets
             steps:
               - name: build-and-push-image
                 command: /kaniko/executor
