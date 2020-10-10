@@ -11,9 +11,9 @@ pipelineConfig:
               volumes:
                 - name: docker-config
                   secret:
-                    secretName: knative-docker-user-pass
+                    secretName: jenkins-docker-cfg
                     items:
-                      - key: ".dockerconfigjson"
+                      - key: config.json
                         path: /kaniko/.docker/config.json
               containerOptions:
                 volumeMounts:
