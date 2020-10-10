@@ -7,14 +7,14 @@ pipelineConfig:
           image: mellardc/potato:3.0
         stages:
           - name: build
-            options:
-              volumes:
-                - name: docker-config
-                  secret:
-                    secretName: knative-docker-user-pass
-                    items:
-                      - key: .dockerconfigjson
-                        path: /kaniko/.docker/config.json
+#            options:
+#              volumes:
+#                - name: docker-config
+#                  secret:
+#                    secretName: knative-docker-user-pass
+#                    items:
+#                      - key: .dockerconfigjson
+#                        path: /kaniko/.docker/config.json
             steps:
               - name: build-and-push-image
                 command: /kaniko/executor
