@@ -7,15 +7,15 @@ pipelineConfig:
           image: mellardc/potato:5.0
         stages:
           - name: build
-#            options:
-#              volumes:
-#                - name: dconf
-#                  secret:
-#                    secretName: jenkins-docker-cfg
-#              containerOptions:
-#                volumeMounts:
-#                  - name: dconf
-#                    mountPath: /kaniko/.docker
+            options:
+              volumes:
+                - name: dconf
+                  secret:
+                    secretName: jenkins-docker-cfg
+              containerOptions:
+                volumeMounts:
+                  - name: dconf
+                    mountPath: /kaniko/.docker
             steps:
               - name: build-and-push-image
                 command: /kaniko/executor
