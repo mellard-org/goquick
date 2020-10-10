@@ -4,11 +4,11 @@ pipelineConfig:
     pullRequest:
       pipeline:
         agent:
-          image: mellardc/potato
+          image: mellardc/potato:1.0
         stages:
           - name: build
             steps:
               - name: build-and-push-image
-                image: mellardc/potato
+                image: mellardc/potato:1.0
                 command: /kaniko/executor
                 args: ['--dockerfile=Dockerfile','--destination=tfjxlegibledog.azurecr.io/potato', "--context=/workspace/source"]
