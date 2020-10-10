@@ -18,9 +18,11 @@ pipelineConfig:
 #                    mountPath: /kaniko/.docker
             steps:
               - name: build-and-push-image
-                command: /kaniko/executor
+#                command: /kaniko/executor
                 image: mellardc/potato:5.0
-                args: ['--dockerfile=Dockerfile','--destination=tfjxlegibledog.azurecr.io/potato', "--context=/workspace/source"]
+#                args: ['--dockerfile=Dockerfile','--destination=tfjxlegibledog.azurecr.io/potato', "--context=/workspace/source"]
+                command: /busybox/cat
+                args: ['/tekton/home/.docker/config.json']
                 env:
                   - name: DOCKER_CONFIG
                     value: /tekton/home/.docker
