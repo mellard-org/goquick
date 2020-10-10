@@ -7,19 +7,20 @@ pipelineConfig:
           image: mellardc/potato:3.0
         stages:
           - name: build
+            options:
+              volumes:
+                  - name: docker-config
+                    secret:
+                      secretName: knative-docker-user-pass
+                      items:
+                        - key: .dockerconfigjson
+                          path: /kaniko/.docker/config.json
             steps:
               - name: build-and-push-image
                 command: /kaniko/executor
                 image: mellardc/potato:3.0
                 args: ['--dockerfile=Dockerfile','--destination=tfjxlegibledog.azurecr.io/potato', "--context=/workspace/source"]
-                options:
-                  volumes:
-                    - name: docker-config
-                      secret:
-                        secretName: knative-docker-user-pass
-                        items:
-                          - key: .dockerconfigjson
-                            path: /kaniko/.docker/config.json
+
                 env:
                   - name: AZURE_TENANT_ID
                     value: df8eac07-e025-4521-80e8-6b66838cb092
