@@ -9,12 +9,12 @@ pipelineConfig:
           - name: build
             options:
               volumes:
-                  - name: docker-config
-                    secret:
-                      secretName: knative-docker-user-pass
-                      items:
-                        - key: .dockerconfigjson
-                          path: /kaniko/.docker/config.json
+                - name: docker-config
+                  secret:
+                    secretName: knative-docker-user-pass
+                    items:
+                      - key: .dockerconfigjson
+                        path: /kaniko/.docker/config.json
             steps:
               - name: build-and-push-image
                 command: /kaniko/executor
