@@ -1,12 +1,12 @@
-buildPack: go
-#pipelineConfig:
-#  pipelines:
-#    pullRequest:
-#      pipeline:
-#        agent:
-#          image: mellardc/potato:5.0
-#        stages:
-#          - name: build
+buildPack: none
+pipelineConfig:
+  pipelines:
+    pullRequest:
+      pipeline:
+        agent:
+          image: mellardc/potato:5.0
+        stages:
+          - name: build
 #            options:
 #              volumes:
 #                - name: dconf
@@ -16,8 +16,11 @@ buildPack: go
 #                volumeMounts:
 #                  - name: dconf
 #                    mountPath: /kaniko/.docker
-#            steps:
-#              - name: build-and-push-image
-#                command: /kaniko/executor
-#                image: mellardc/potato:5.0
-#                args: ['--dockerfile=Dockerfile','--destination=tfjxlegibledog.azurecr.io/potato', "--context=/workspace/source"]
+            steps:
+              - name: build-and-push-image
+                command: /kaniko/executor
+                image: mellardc/potato:5.0
+                args: ['--dockerfile=Dockerfile','--destination=tfjxlegibledog.azurecr.io/potato', "--context=/workspace/source"]
+                env:
+                  - name: DOCKER_CONFIG
+                    value: /tekton/home/.docker
