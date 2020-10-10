@@ -1,0 +1,45 @@
+
+Showing logs for build [32mmellard-org-goquick-pr-1-pr-bui-ht9cq-12[0m stage [32mbuild[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1602293553.0703492,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32mmellard-org-goquick-pr-1-pr-bui-ht9cq-12[0m stage [32mbuild[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32mmellard-org-goquick-pr-1-pr-bui-ht9cq-12[0m stage [32mbuild[0m and container [32mplace-tools[0m
+
+Showing logs for build [32mmellard-org-goquick-pr-1-pr-bui-ht9cq-12[0m stage [32mbuild[0m and container [32mstep-git-source-mellard-org-goquick-pr-1-pr-bui-ht9cq-7gmcb[0m
+{"level":"info","ts":1602293567.5720158,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/mellard-org/goquick.git @ master in path /workspace/source"}
+{"level":"warn","ts":1602293567.5720866,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /root/.ssh: file exists"}
+{"level":"info","ts":1602293567.6207356,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32mmellard-org-goquick-pr-1-pr-bui-ht9cq-12[0m stage [32mbuild[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32mmellard-org-goquick-pr-1-pr-bui-ht9cq-12[0m stage [32mbuild[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:05ced96a1ea4a807b6bf4339b070f1134bd1c281,1:01f9d9e4a74f09ff80699ebed5f15733c67fa7ef
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin --unshallow 01f9d9e4a74f09ff80699ebed5f15733c67fa7ef: 05ced96a1ea4a807b6bf4339b070f1134bd1c281:
+DEBUG: ran git fetch --unshallow origin 01f9d9e4a74f09ff80699ebed5f15733c67fa7ef: 05ced96a1ea4a807b6bf4339b070f1134bd1c281: in 
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git branch
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard 05ced96a1ea4a807b6bf4339b070f1134bd1c281
+DEBUG: ran git reset --hard 05ced96a1ea4a807b6bf4339b070f1134bd1c281 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge 01f9d9e4a74f09ff80699ebed5f15733c67fa7ef
+DEBUG: ran git merge 01f9d9e4a74f09ff80699ebed5f15733c67fa7ef in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e 05ced96a1ea4a807b6bf4339b070f1134bd1c281..HEAD
+Merged SHA 01f9d9e4a74f09ff80699ebed5f15733c67fa7ef with commit message 'test' into base branch master
+Merged SHA cd66e38468d2211fc06b4c104662d9e94f12d581 with commit message 'test' into base branch master
+Merged SHA ee5aa50e7235ca92c6847d296737c00d972595de with commit message 'test' into base branch master
+Merged SHA 28c5c4fd5fcd70cc819ee68a612f335356ab4cb1 with commit message 'test' into base branch master
+Merged SHA 15161e6235a8611d8492dd08cedcfe22e3e4fb35 with commit message 'test' into base branch master
+Merged SHA 3c84465a31b00d3960cc2526cd0cf49c44e9d3ee with commit message 'test' into base branch master
+Merged SHA cc806829a614e70d1599efcbd1918da66ba4ed12 with commit message 'test' into base branch master
+Merged SHA 62de4cf1717587ff6661349c25a2dd5106c5fa33 with commit message 'test' into base branch master
+Merged SHA f9acb72a3b27297551a8db336b7343bc422029d6 with commit message 'test' into base branch master
+
+Showing logs for build [32mmellard-org-goquick-pr-1-pr-bui-ht9cq-12[0m stage [32mbuild[0m and container [32mstep-build-and-push-image[0m
+E1010 01:32:51.685996       9 aws_credentials.go:77] while getting AWS credentials NoCredentialProviders: no valid providers in chain. Deprecated.
+	For verbose messaging see aws.Config.CredentialsChainVerboseErrors
+error checking push permissions -- make sure you entered the correct tag name, and that you are authenticated correctly, and try again: checking push permission for "tf**legibledog.azurecr.io/potato": creating push check transport for tf**legibledog.azurecr.io failed: GET https://tf**legibledog.azurecr.io/oauth2/token?scope=repository%3Apotato%3Apush%2Cpull&service=tf**legibledog.azurecr.io: UNAUTHORIZED: authentication required, visit https://aka.ms/acr/authorization for more information.
+[31m
+Pipeline failed on stage 'build' : container 'step-build-and-push-image'. The execution of the pipeline has stopped.[0m
