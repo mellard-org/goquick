@@ -7,31 +7,17 @@ pipelineConfig:
           image: mellardc/potato:5.0
         stages:
           - name: build
-            options:
-              volumes:
-                - name: dconf
-                  secret:
-                    secretName: jenkins-docker-cfg
-#                    items:
-#                    - key: config.json
-#                      path: kaniko/.docker/config.json
-              containerOptions:
-                volumeMounts:
-                  - name: dconf
-                    mountPath: /kaniko/.docker
+#            options:
+#              volumes:
+#                - name: dconf
+#                  secret:
+#                    secretName: jenkins-docker-cfg
+#              containerOptions:
+#                volumeMounts:
+#                  - name: dconf
+#                    mountPath: /kaniko/.docker
             steps:
               - name: build-and-push-image
                 command: /kaniko/executor
                 image: mellardc/potato:5.0
                 args: ['--dockerfile=Dockerfile','--destination=tfjxlegibledog.azurecr.io/potato', "--context=/workspace/source"]
-
-#                env:
-#                  - name: AZURE_TENANT_ID
-#                    value: df8eac07-e025-4521-80e8-6b66838cb092
-#                  - name: AZURE_CLIENT_ID
-#                    value: ba864fb9-403a-4549-b330-68d8de43a6c2
-#                  - name: AZURE_CLIENT_SECRET
-#                    valueFrom:
-#                      secretKeyRef:
-#                        name: jx-terra-test
-#                        key: AZURE_CLIENT_SECRET
