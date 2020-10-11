@@ -9,7 +9,7 @@ pipelineConfig:
           - name: build
             options:
               containerOptions:
-                serviceAccountName: potato
+                serviceAccountName: jx-boot-job
             steps:
               - name: build-and-push-image
                 command: /kaniko/executor
