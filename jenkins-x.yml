@@ -7,8 +7,9 @@ pipelineConfig:
           image: mellardc/potato:6.0
         stages:
           - name: build
-            containerOptions:
-              serviceAccountName: potato
+            options:
+              containerOptions:
+                serviceAccountName: potato
             steps:
               - name: build-and-push-image
 #                command: /kaniko/executor
