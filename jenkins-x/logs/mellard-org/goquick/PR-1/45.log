@@ -1,0 +1,127 @@
+
+Showing logs for build [32mmeta-mellard-org-goquick-pr-1-p-frfwp-45[0m stage [32mmeta-pipeline[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1602401844.7903776,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32mmeta-mellard-org-goquick-pr-1-p-frfwp-45[0m stage [32mmeta-pipeline[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32mmeta-mellard-org-goquick-pr-1-p-frfwp-45[0m stage [32mmeta-pipeline[0m and container [32mplace-tools[0m
+
+Showing logs for build [32mmeta-mellard-org-goquick-pr-1-p-frfwp-45[0m stage [32mmeta-pipeline[0m and container [32mstep-git-source-meta-mellard-org-goquick-pr-1-p-frfwp-x4thl[0m
+{"level":"info","ts":1602401859.071619,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/mellard-org/goquick.git @ 05ced96a1ea4a807b6bf4339b070f1134bd1c281 in path /workspace/source"}
+{"level":"warn","ts":1602401859.0716915,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /root/.ssh: file exists"}
+{"level":"info","ts":1602401859.1082268,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32mmeta-mellard-org-goquick-pr-1-p-frfwp-45[0m stage [32mmeta-pipeline[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32mmeta-mellard-org-goquick-pr-1-p-frfwp-45[0m stage [32mmeta-pipeline[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:05ced96a1ea4a807b6bf4339b070f1134bd1c281,1:f1a441668bdcbde0bbed942618c788da4194d969
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin --unshallow f1a441668bdcbde0bbed942618c788da4194d969: 05ced96a1ea4a807b6bf4339b070f1134bd1c281:
+DEBUG: ran git fetch --unshallow origin f1a441668bdcbde0bbed942618c788da4194d969: 05ced96a1ea4a807b6bf4339b070f1134bd1c281: in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git branch
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard 05ced96a1ea4a807b6bf4339b070f1134bd1c281
+DEBUG: ran git reset --hard 05ced96a1ea4a807b6bf4339b070f1134bd1c281 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge f1a441668bdcbde0bbed942618c788da4194d969
+DEBUG: ran git merge f1a441668bdcbde0bbed942618c788da4194d969 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e 05ced96a1ea4a807b6bf4339b070f1134bd1c281..HEAD
+Merged SHA f1a441668bdcbde0bbed942618c788da4194d969 with commit message 'test' into base branch master
+Merged SHA 72bd5022127e5241689208a5828bb1fd75a83ca5 with commit message 'test' into base branch master
+Merged SHA 4f719b14870b5d00951c4c5c66537e7a0a4ef430 with commit message 'test' into base branch master
+Merged SHA 6729106a370ce85aa5fd8873a2b47049c229c004 with commit message 'test' into base branch master
+Merged SHA 3c520ea6cd898b47165207eac5b69c73db38b051 with commit message 'test' into base branch master
+Merged SHA a8bd1737662449da6ff25cb312c029c1cc84333f with commit message 'test' into base branch master
+Merged SHA c913a396dd6723052cb216330bb0a6e4c73878d3 with commit message 'test' into base branch master
+Merged SHA a258454038bd3fdd2cbc091f24b768fa624b3720 with commit message 'test' into base branch master
+Merged SHA 546edc6e3a643434ed506d1cacfcb79263d13b8e with commit message 'test' into base branch master
+Merged SHA a2ef1a6206961b968e564fcfa1aaec8338bc41d9 with commit message 'test' into base branch master
+Merged SHA 3e87661e51700505f15ac2fc14793e593b352169 with commit message 'test' into base branch master
+Merged SHA 192b03837aafe9f201c4bb1a5e9adf04591cfa80 with commit message 'test' into base branch master
+Merged SHA 4b5e47e6363c00a23a54a128c1b2e92adfc6b2b6 with commit message 'test' into base branch master
+Merged SHA 323cfe5f195af4d20ffac11df3b9f935abe69761 with commit message 'test' into base branch master
+Merged SHA f94d23c31af9dee9f9ed0954f4209c7d7f72b5d5 with commit message 'test' into base branch master
+Merged SHA 890ea2aa3a2bce75fa625fd65f40e46990f73392 with commit message 'test' into base branch master
+Merged SHA 4014601da937b1637862393d30c44a18930a1955 with commit message 'test' into base branch master
+Merged SHA c5f961d24c0cb8d926a8065bb3572121ba3d8731 with commit message 'test' into base branch master
+Merged SHA bdcf763f1baf60eb4fa36308cd98f64b0be5cb35 with commit message 'test' into base branch master
+Merged SHA 244f4351ed27183302831912e04ca8267b415d72 with commit message 'test' into base branch master
+Merged SHA 243f42832a58e477daad308fd12a8e7dc7309b21 with commit message 'test' into base branch master
+Merged SHA b92e4d8213baa0b088e996e70c1b298203bf1d70 with commit message 'test' into base branch master
+Merged SHA e3cf400abd65843f3aad8e77630bc5ec25cf068d with commit message 'test' into base branch master
+Merged SHA 57417ccb3f1817efaceb556505c66844c3357744 with commit message 'test' into base branch master
+Merged SHA afa6813e3503f3622465a2b9a117012f557a20eb with commit message 'test' into base branch master
+Merged SHA bbea3e2e473235b8e476a7f433eb2707b957c797 with commit message 'test' into base branch master
+Merged SHA 8f51bc4f3b8d5658c77bd2993f569c64dab75928 with commit message 'test' into base branch master
+Merged SHA a6e88206f1257ef6ab0f9dbd0911416c901ed5b7 with commit message 'test' into base branch master
+Merged SHA fc9ae736e3d284fe5ce50be2a19fa9452950e67a with commit message 'test' into base branch master
+Merged SHA 01f9d9e4a74f09ff80699ebed5f15733c67fa7ef with commit message 'test' into base branch master
+Merged SHA cd66e38468d2211fc06b4c104662d9e94f12d581 with commit message 'test' into base branch master
+Merged SHA ee5aa50e7235ca92c6847d296737c00d972595de with commit message 'test' into base branch master
+Merged SHA 28c5c4fd5fcd70cc819ee68a612f335356ab4cb1 with commit message 'test' into base branch master
+Merged SHA 15161e6235a8611d8492dd08cedcfe22e3e4fb35 with commit message 'test' into base branch master
+Merged SHA 3c84465a31b00d3960cc2526cd0cf49c44e9d3ee with commit message 'test' into base branch master
+Merged SHA cc806829a614e70d1599efcbd1918da66ba4ed12 with commit message 'test' into base branch master
+Merged SHA 62de4cf1717587ff6661349c25a2dd5106c5fa33 with commit message 'test' into base branch master
+Merged SHA f9acb72a3b27297551a8db336b7343bc422029d6 with commit message 'test' into base branch master
+
+Showing logs for build [32mmeta-mellard-org-goquick-pr-1-p-frfwp-45[0m stage [32mmeta-pipeline[0m and container [32mstep-merge-pull-refs[0m
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin --unshallow f1a441668bdcbde0bbed942618c788da4194d969: 05ced96a1ea4a807b6bf4339b070f1134bd1c281:
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin f1a441668bdcbde0bbed942618c788da4194d969: 05ced96a1ea4a807b6bf4339b070f1134bd1c281:
+DEBUG: ran git fetch origin f1a441668bdcbde0bbed942618c788da4194d969: 05ced96a1ea4a807b6bf4339b070f1134bd1c281: in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git rev-parse --is-shallow-repository
+DEBUG: Unshallowed git repo in 
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git branch
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard 05ced96a1ea4a807b6bf4339b070f1134bd1c281
+DEBUG: ran git reset --hard 05ced96a1ea4a807b6bf4339b070f1134bd1c281 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge f1a441668bdcbde0bbed942618c788da4194d969
+DEBUG: ran git merge f1a441668bdcbde0bbed942618c788da4194d969 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e 05ced96a1ea4a807b6bf4339b070f1134bd1c281..HEAD
+Merged SHA f1a441668bdcbde0bbed942618c788da4194d969 with commit message 'test' into base branch master
+Merged SHA 72bd5022127e5241689208a5828bb1fd75a83ca5 with commit message 'test' into base branch master
+Merged SHA 4f719b14870b5d00951c4c5c66537e7a0a4ef430 with commit message 'test' into base branch master
+Merged SHA 6729106a370ce85aa5fd8873a2b47049c229c004 with commit message 'test' into base branch master
+Merged SHA 3c520ea6cd898b47165207eac5b69c73db38b051 with commit message 'test' into base branch master
+Merged SHA a8bd1737662449da6ff25cb312c029c1cc84333f with commit message 'test' into base branch master
+Merged SHA c913a396dd6723052cb216330bb0a6e4c73878d3 with commit message 'test' into base branch master
+Merged SHA a258454038bd3fdd2cbc091f24b768fa624b3720 with commit message 'test' into base branch master
+Merged SHA 546edc6e3a643434ed506d1cacfcb79263d13b8e with commit message 'test' into base branch master
+Merged SHA a2ef1a6206961b968e564fcfa1aaec8338bc41d9 with commit message 'test' into base branch master
+Merged SHA 3e87661e51700505f15ac2fc14793e593b352169 with commit message 'test' into base branch master
+Merged SHA 192b03837aafe9f201c4bb1a5e9adf04591cfa80 with commit message 'test' into base branch master
+Merged SHA 4b5e47e6363c00a23a54a128c1b2e92adfc6b2b6 with commit message 'test' into base branch master
+Merged SHA 323cfe5f195af4d20ffac11df3b9f935abe69761 with commit message 'test' into base branch master
+Merged SHA f94d23c31af9dee9f9ed0954f4209c7d7f72b5d5 with commit message 'test' into base branch master
+Merged SHA 890ea2aa3a2bce75fa625fd65f40e46990f73392 with commit message 'test' into base branch master
+Merged SHA 4014601da937b1637862393d30c44a18930a1955 with commit message 'test' into base branch master
+Merged SHA c5f961d24c0cb8d926a8065bb3572121ba3d8731 with commit message 'test' into base branch master
+Merged SHA bdcf763f1baf60eb4fa36308cd98f64b0be5cb35 with commit message 'test' into base branch master
+Merged SHA 244f4351ed27183302831912e04ca8267b415d72 with commit message 'test' into base branch master
+Merged SHA 243f42832a58e477daad308fd12a8e7dc7309b21 with commit message 'test' into base branch master
+Merged SHA b92e4d8213baa0b088e996e70c1b298203bf1d70 with commit message 'test' into base branch master
+Merged SHA e3cf400abd65843f3aad8e77630bc5ec25cf068d with commit message 'test' into base branch master
+Merged SHA 57417ccb3f1817efaceb556505c66844c3357744 with commit message 'test' into base branch master
+Merged SHA afa6813e3503f3622465a2b9a117012f557a20eb with commit message 'test' into base branch master
+Merged SHA bbea3e2e473235b8e476a7f433eb2707b957c797 with commit message 'test' into base branch master
+Merged SHA 8f51bc4f3b8d5658c77bd2993f569c64dab75928 with commit message 'test' into base branch master
+Merged SHA a6e88206f1257ef6ab0f9dbd0911416c901ed5b7 with commit message 'test' into base branch master
+Merged SHA fc9ae736e3d284fe5ce50be2a19fa9452950e67a with commit message 'test' into base branch master
+Merged SHA 01f9d9e4a74f09ff80699ebed5f15733c67fa7ef with commit message 'test' into base branch master
+Merged SHA cd66e38468d2211fc06b4c104662d9e94f12d581 with commit message 'test' into base branch master
+Merged SHA ee5aa50e7235ca92c6847d296737c00d972595de with commit message 'test' into base branch master
+Merged SHA 28c5c4fd5fcd70cc819ee68a612f335356ab4cb1 with commit message 'test' into base branch master
+Merged SHA 15161e6235a8611d8492dd08cedcfe22e3e4fb35 with commit message 'test' into base branch master
+Merged SHA 3c84465a31b00d3960cc2526cd0cf49c44e9d3ee with commit message 'test' into base branch master
+Merged SHA cc806829a614e70d1599efcbd1918da66ba4ed12 with commit message 'test' into base branch master
+Merged SHA 62de4cf1717587ff6661349c25a2dd5106c5fa33 with commit message 'test' into base branch master
+Merged SHA f9acb72a3b27297551a8db336b7343bc422029d6 with commit message 'test' into base branch master
+
+Showing logs for build [32mmeta-mellard-org-goquick-pr-1-p-frfwp-45[0m stage [32mmeta-pipeline[0m and container [32mstep-create-effective-pipeline[0m
+error: failed to create the ** client: Get https://10.0.0.1:443/api/v1/namespaces/**: dial tcp 10.0.0.1:443: i/o timeout
+[31m
+Pipeline failed on stage 'meta-pipeline' : container 'step-create-effective-pipeline'. The execution of the pipeline has stopped.[0m
